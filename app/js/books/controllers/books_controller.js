@@ -21,7 +21,7 @@ module.exports = function(app) {
       //EITHER:
       var submitBook = $scope.newBook;
       $scope.newBook = null;
-      $http.post('/api/books', submitBook)
+      $http.post('/api/books', submitBook) //could I just pass newBook in here? check.
         .error(function (error) {
           console.log(error);
           $scope.errors.push({msg: 'could not create new book'});
